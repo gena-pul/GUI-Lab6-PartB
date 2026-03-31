@@ -1,0 +1,70 @@
+/* PATTERN: CSS Variables for easy "Theming" */
+:root {
+    --primary: #007bff;
+    --bg: #f4f7f6;
+    --card-bg: #ffffff;
+    --text: #333;
+    --border: #ddd;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+}
+
+/* PATTERN: Flexbox Layout for the Top Nav */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #222;
+    color: white;
+}
+
+/* PATTERN: Grid Layout for the Dashboard */
+.dashboard {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* PATTERN: The "Card" UI Pattern */
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border: 1px solid var(--border);
+}
+
+/* Progress Bar Styling */
+.progress-container {
+    background: #eee;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease; /* PATTERN: Smooth UI transition */
+}
+
+/* Utility Classes */
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-primary:active { transform: scale(0.98); }

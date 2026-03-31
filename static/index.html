@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Observer Pattern: Multi-Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+
+    <nav class="top-nav">
+        <h1>Project 1: The Event Bus</h1>
+        <div class="badge" data-component="counter-badge">Count: 0</div>
+    </nav>
+
+    <main class="dashboard">
+        
+        <section class="controls card">
+            <h2>Controls</h2>
+            <button id="btn-increment" class="btn-primary">Increment +1</button>
+            <p><small>Clicking this emits a 'count:changed' event.</small></p>
+        </section>
+
+        <section class="visualizer card">
+            <h2>Visualizer</h2>
+            <div class="progress-container">
+                <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+            </div>
+        </section>
+
+        <section class="logger card">
+            <h2>Activity Log</h2>
+            <ul id="log-list" class="log-list">
+            </ul>
+        </section>
+
+    </main>
+</body>
+</html>
