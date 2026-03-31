@@ -8,13 +8,16 @@ export const DataService = {
       const response = await fetch(`${API_BASE}/increment`, {
         method: "POST",
       });
+
       if (!response.ok) {
-        throw new Error(`Server response was not ok: ${response.status}`);
+        throw new Error(`Server error: ${response.status}`);
       }
+
       const data = await response.json();
       emitter.emit("count:changed", data.value);
+
     } catch (error) {
-      console.error(`Error fetching count: ${error}`);
+      console.error(error);
     }
   },
 };

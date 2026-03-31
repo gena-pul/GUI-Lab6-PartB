@@ -6,28 +6,25 @@ const state = {
 };
 
 function renderList() {
-  const log = document.querySelector(".log-list");
-  if (!log) {
-    return;
-  }
+  const log = document.querySelector("#log-list");
+  if (!log) return;
+
   if (state.count >= 1) {
     log.innerHTML += `<li>Updated to: ${state.count}</li>`;
   }
 }
 
 function renderProgress() {
-  const progress = document.querySelector(".progress-fill");
-  if (!progress) {
-    return;
-  }
+  const progress = document.querySelector("#progress-fill");
+  if (!progress) return;
+
   progress.style.width = `${state.count}%`;
 }
 
 function renderDisplay() {
   const badge = document.querySelector(".badge");
-  if (!badge) {
-    return;
-  }
+  if (!badge) return;
+
   badge.textContent = `Count: ${state.count}`;
 }
 
@@ -48,4 +45,5 @@ if (button) {
     DataService.fetchCount();
   });
 }
+
 render();
